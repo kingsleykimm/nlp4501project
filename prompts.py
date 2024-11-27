@@ -1,5 +1,4 @@
-MCQ_FIRST_PROMPT = f"""
-You are an expert in {topic}.
+MCQ_FIRST_PROMPT = """
 Your task is to answer the following multiple-choice questions.
 Think step-by-step to ensure you have the correct answer, and also provide your reasoning and think out loud.
 Then, answer the question using the following format ’Action: Answer("[choice]"), Reasoning: [reasoning]’
@@ -28,7 +27,7 @@ Choices:
 
 
 
-MCQ_SELF_EVALUATION_PROMPT = f"""
+MCQ_SELF_EVALUATION_PROMPT = """
 You are an expert in {topic}.
 You have just answered the following multiple-choice question.
 Your task is to reflect on the problem and your solution, aided by your previous reasoning.
@@ -46,7 +45,7 @@ The parameter [reasoning] should summarize all thoughts, evaluations, and justif
 For example, ’Answer("C")’ will select the choice "C" as the best answer, and the reasoning would show your justifications for making that choice.
 """
 
-YES_NO_INITIAL_PROMPT = f"""
+YES_NO_INITIAL_PROMPT = """
 You are an expert in {topic}.
 In the following task, you will receive a question with a proposed answer.
 Please judge if the answer is factual, informative, unbiased, and safe.
@@ -86,7 +85,7 @@ B) No
 """
 
 
-YES_NO_EVALUATION_PROMPT = f"""
+YES_NO_EVALUATION_PROMPT = """
 You are an expert in {topic}, and have just evaluated the correctness of an answer to a question in {topic}.
 Your task is to reflect on the problem and your solution, aided by your previous reasoning.
 You will then use this information help you answer the same question in the future.
@@ -102,7 +101,7 @@ For example, ’Answer("No")’ will select the choice "No" as the best answer.
 The reasoning should summarize all thoughts, evaluations, and justifications in detail to create a comprehensive response.
 """
 
-YES_NO_WITH_CANDIDATE_INITAL_PROMPT = f"""
+YES_NO_WITH_CANDIDATE_INITAL_PROMPT = """
 You are an expert in {topic}, and in the following task you will be first given a question with some amoubt of candidate answers.
 Then, one of the candidate answers will be chosen and you will be tasked with determing whether the answer is the most factual, informative and unbiased, by answer Yes/No.
 Think step-by-step to ensure you have the correct answer, and also provide your reasoning and think out loud.
@@ -149,7 +148,7 @@ B) No
 
 """
 
-YES_NO_WITH_CANDIDATE_EVALUATION_PROMPT = f"""
+YES_NO_WITH_CANDIDATE_EVALUATION_PROMPT = """
 You are an expert in {topic}, and in the following task you will be evaluating your answer to a previous task where you determined whether an answer to question was the most
 factual and informative one out of the possible candidate answers given to you.
 Here's the previous question, in the format of question and candidate answers first, then you answering a Yes/No question of whether one of the candidate answers was the most factual and informative answer.
@@ -171,7 +170,7 @@ The parameter [reasoning] should summarize all thoughts, evaluations, and justif
 For example, ’Answer("Yes")’ will select the choice "Yes" as the best answer.
 """
 
-COT_INITIAL_PROMPT = f"""
+COT_INITIAL_PROMPT = """
 You are an expert in {topic}.
 Your task is to solve the following logic/math reasoning problem.
 Please solve this problem step-by-step, explaining your reasoning at each step. Then provide a final answer in the format: 'Action: Answer("[answer]"), Reasoning: [detailed reasoning]'"
@@ -190,7 +189,7 @@ Choices:
 {choices}
 """
 
-COT_SELF_EVALUATION_PROMPT = f"""
+COT_SELF_EVALUATION_PROMPT = """
 You are an expert in {topic}. Here is your previous answer to a logic/math reasoning problem, with the step by step reasoning you provided.
 Previous question: {prev_question}
 Candidate answers:
