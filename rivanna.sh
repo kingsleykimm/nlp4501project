@@ -10,4 +10,6 @@ module purge
 module load cuda apptainer pytorch
 module load anaconda
 
-/scratch/bjb3az/.conda/envs/habitat/bin/python run.py
+# /scratch/bjb3az/.conda/envs/habitat/bin/python mcq.py
+# /scratch/bjb3az/.conda/envs/habitat/bin/python yes_no.py
+/scratch/bjb3az/.conda/envs/habitat/bin/python yes_no_candidates.py
